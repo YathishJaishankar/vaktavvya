@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+html, body, #root {
+  min-height: 100%;
+  background-color: #fafafa; /* neutral-50 */
+  color: #262626; /* neutral-800 */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: #171717; /* neutral-900 */
+  transition: color 200ms;
+}
+a:hover { color: #525252; } /* neutral-600 */
+
+/* Ensure button text is white on black backgrounds */
+a.bg-black,
+a.bg-neutral-900 {
+  color: #ffffff !important;
+}
+a.bg-black:hover,
+a.bg-neutral-900:hover {
+  color: #ffffff !important;
+}
+
+/* Custom helpers used in components */
+.section {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  max-width: 80rem; /* ~1280px */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card {
+  border-radius: 1rem; /* rounded-2xl */
+  border: 1px solid #e5e5e5; /* neutral-200 */
+  background-color: rgba(255,255,255,0.8);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 10px 30px -10px rgba(0,0,0,0.25);
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #0f172a, #94a3b8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
